@@ -26,6 +26,9 @@
                             {{ trans('cruds.order.fields.id') }}
                         </th>
                         <th>
+                            {{ trans('cruds.order.fields.order_no') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.order.fields.name') }}
                         </th>
                         <th>
@@ -71,6 +74,9 @@
                             </td>
                             <td>
                                 {{ $order->id ?? '' }}
+                            </td>
+                            <td>
+                                {{ $order->order_no ?? '' }}
                             </td>
                             <td>
                                 {{ $order->name ?? '' }}

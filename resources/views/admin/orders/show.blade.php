@@ -25,6 +25,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.order.fields.order_no') }}
+                        </th>
+                        <td>
+                            {{ $order->order_no }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.order.fields.name') }}
                         </th>
                         <td>

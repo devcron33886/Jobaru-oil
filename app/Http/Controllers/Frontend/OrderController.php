@@ -20,7 +20,7 @@ class OrderController extends Controller
     {
         abort_if(Gate::denies('order_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $orders = Order::with(['fuel', 'payment', 'updated_by', 'created_by'])->get();
+        $orders = Order::with(['fuel', 'payment', 'created_by', 'updated_by'])->get();
 
         return view('frontend.orders.index', compact('orders'));
     }
@@ -55,7 +55,7 @@ class OrderController extends Controller
 
         $updated_bies = User::pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $order->load('fuel', 'payment', 'updated_by', 'created_by');
+        $order->load('fuel', 'payment', 'created_by', 'updated_by');
 
         return view('frontend.orders.edit', compact('fuels', 'order', 'payments', 'updated_bies'));
     }
@@ -71,7 +71,7 @@ class OrderController extends Controller
     {
         abort_if(Gate::denies('order_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $order->load('fuel', 'payment', 'updated_by', 'created_by');
+        $order->load('fuel', 'payment', 'created_by', 'updated_by');
 
         return view('frontend.orders.show', compact('order'));
     }

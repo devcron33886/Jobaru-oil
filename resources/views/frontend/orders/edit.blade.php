@@ -14,6 +14,16 @@
                         @method('PUT')
                         @csrf
                         <div class="form-group">
+                            <label for="order_no">{{ trans('cruds.order.fields.order_no') }}</label>
+                            <input class="form-control" type="text" name="order_no" id="order_no" value="{{ old('order_no', $order->order_no) }}">
+                            @if($errors->has('order_no'))
+                                <div class="invalid-feedback">
+                                    {{ $errors->first('order_no') }}
+                                </div>
+                            @endif
+                            <span class="help-block">{{ trans('cruds.order.fields.order_no_helper') }}</span>
+                        </div>
+                        <div class="form-group">
                             <label class="required" for="name">{{ trans('cruds.order.fields.name') }}</label>
                             <input class="form-control" type="text" name="name" id="name" value="{{ old('name', $order->name) }}" required>
                             @if($errors->has('name'))
