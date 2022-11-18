@@ -121,6 +121,8 @@ return [
             'updated_by_helper'     => ' ',
             'created_by'            => 'Created By',
             'created_by_helper'     => ' ',
+            'total'                 => 'Total amount to pay',
+            'total_helper'          => ' ',
         ],
     ],
     'paymentMethod' => [

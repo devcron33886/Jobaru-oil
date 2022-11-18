@@ -49,6 +49,7 @@ class Order extends Model
         'quantity',
         'order_size',
         'preferred_date',
+        'total',
         'status',
         'payment_id',
         'payment_status',

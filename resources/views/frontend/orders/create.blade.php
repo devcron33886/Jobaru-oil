@@ -93,6 +93,16 @@
                             <span class="help-block">{{ trans('cruds.order.fields.preferred_date_helper') }}</span>
                         </div>
                         <div class="form-group">
+                            <label for="total">{{ trans('cruds.order.fields.total') }}</label>
+                            <input class="form-control" type="number" name="total" id="total" value="{{ old('total', '') }}" step="1">
+                            @if($errors->has('total'))
+                                <div class="invalid-feedback">
+                                    {{ $errors->first('total') }}
+                                </div>
+                            @endif
+                            <span class="help-block">{{ trans('cruds.order.fields.total_helper') }}</span>
+                        </div>
+                        <div class="form-group">
                             <label>{{ trans('cruds.order.fields.status') }}</label>
                             <select class="form-control" name="status" id="status">
                                 <option value disabled {{ old('status', null) === null ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>

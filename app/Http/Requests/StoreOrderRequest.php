@@ -46,6 +46,12 @@ class StoreOrderRequest extends FormRequest
                 'required',
                 'date_format:' . config('panel.date_format') . ' ' . config('panel.time_format'),
             ],
+            'total' => [
+                'nullable',
+                'integer',
+                'min:-2147483648',
+                'max:2147483647',
+            ],
             'payment_id' => [
                 'required',
                 'integer',

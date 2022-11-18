@@ -16,6 +16,7 @@ class CreateOrdersTable extends Migration
             $table->integer('quantity');
             $table->string('order_size');
             $table->datetime('preferred_date');
+            $table->integer('total')->nullable();
             $table->string('status')->nullable();
             $table->string('payment_status');
             $table->timestamps();
