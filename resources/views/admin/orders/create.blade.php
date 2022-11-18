@@ -13,9 +13,7 @@
                 <label class="required" for="name">{{ trans('cruds.order.fields.name') }}</label>
                 <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', '') }}" required>
                 @if($errors->has('name'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('name') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('name') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.name_helper') }}</span>
             </div>
@@ -23,9 +21,7 @@
                 <label for="company">{{ trans('cruds.order.fields.company') }}</label>
                 <input class="form-control {{ $errors->has('company') ? 'is-invalid' : '' }}" type="text" name="company" id="company" value="{{ old('company', '') }}">
                 @if($errors->has('company'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('company') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('company') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.company_helper') }}</span>
             </div>
@@ -33,9 +29,7 @@
                 <label class="required" for="plate_number">{{ trans('cruds.order.fields.plate_number') }}</label>
                 <input class="form-control {{ $errors->has('plate_number') ? 'is-invalid' : '' }}" type="text" name="plate_number" id="plate_number" value="{{ old('plate_number', '') }}" required>
                 @if($errors->has('plate_number'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('plate_number') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('plate_number') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.plate_number_helper') }}</span>
             </div>
@@ -47,9 +41,7 @@
                     @endforeach
                 </select>
                 @if($errors->has('fuel'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('fuel') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('fuel') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.fuel_helper') }}</span>
             </div>
@@ -57,9 +49,7 @@
                 <label class="required" for="quantity">{{ trans('cruds.order.fields.quantity') }}</label>
                 <input class="form-control {{ $errors->has('quantity') ? 'is-invalid' : '' }}" type="number" name="quantity" id="quantity" value="{{ old('quantity', '') }}" step="1" required>
                 @if($errors->has('quantity'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('quantity') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('quantity') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.quantity_helper') }}</span>
             </div>
@@ -72,9 +62,7 @@
                     </div>
                 @endforeach
                 @if($errors->has('order_size'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('order_size') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('order_size') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.order_size_helper') }}</span>
             </div>
@@ -82,9 +70,7 @@
                 <label class="required" for="preferred_date">{{ trans('cruds.order.fields.preferred_date') }}</label>
                 <input class="form-control datetime {{ $errors->has('preferred_date') ? 'is-invalid' : '' }}" type="text" name="preferred_date" id="preferred_date" value="{{ old('preferred_date') }}" required>
                 @if($errors->has('preferred_date'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('preferred_date') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('preferred_date') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.preferred_date_helper') }}</span>
             </div>
@@ -92,9 +78,7 @@
                 <label for="total">{{ trans('cruds.order.fields.total') }}</label>
                 <input class="form-control {{ $errors->has('total') ? 'is-invalid' : '' }}" type="number" name="total" id="total" value="{{ old('total', '') }}" step="1">
                 @if($errors->has('total'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('total') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('total') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.total_helper') }}</span>
             </div>
@@ -107,9 +91,7 @@
                     @endforeach
                 </select>
                 @if($errors->has('status'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('status') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('status') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.status_helper') }}</span>
             </div>
@@ -121,9 +103,7 @@
                     @endforeach
                 </select>
                 @if($errors->has('payment'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('payment') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('payment') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.payment_helper') }}</span>
             </div>
@@ -136,9 +116,7 @@
                     @endforeach
                 </select>
                 @if($errors->has('payment_status'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('payment_status') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('payment_status') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.payment_status_helper') }}</span>
             </div>
@@ -150,9 +128,7 @@
                     @endforeach
                 </select>
                 @if($errors->has('updated_by'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('updated_by') }}
-                    </div>
+                    <span class="text-danger">{{ $errors->first('updated_by') }}</span>
                 @endif
                 <span class="help-block">{{ trans('cruds.order.fields.updated_by_helper') }}</span>
             </div>
