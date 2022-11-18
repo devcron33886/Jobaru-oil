@@ -42,6 +42,7 @@ class Order extends Model
     ];
 
     protected $fillable = [
+        'order_no',
         'name',
         'company',
         'plate_number',
@@ -53,11 +54,11 @@ class Order extends Model
         'status',
         'payment_id',
         'payment_status',
+        'created_by_id',
         'updated_by_id',
         'created_at',
         'updated_at',
         'deleted_at',
-        'created_by_id',
     ];
 
     public function fuel()
@@ -80,14 +81,14 @@ class Order extends Model
         return $this->belongsTo(PaymentMethod::class, 'payment_id');
     }
 
-    public function updated_by()
-    {
-        return $this->belongsTo(User::class, 'updated_by_id');
-    }
-
     public function created_by()
     {
         return $this->belongsTo(User::class, 'created_by_id');
+    }
+
+    public function updated_by()
+    {
+        return $this->belongsTo(User::class, 'updated_by_id');
     }
 
     protected function serializeDate(DateTimeInterface $date)

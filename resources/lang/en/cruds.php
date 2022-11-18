@@ -123,6 +123,8 @@ return [
             'created_by_helper'     => ' ',
             'total'                 => 'Total amount to pay',
             'total_helper'          => ' ',
+            'order_no'              => 'Order No',
+            'order_no_helper'       => ' ',
         ],
     ],
     'paymentMethod' => [
