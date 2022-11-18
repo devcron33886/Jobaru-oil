@@ -81,6 +81,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.order.fields.total') }}
+                        </th>
+                        <td>
+                            {{ $order->total }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.order.fields.status') }}
                         </th>
                         <td>

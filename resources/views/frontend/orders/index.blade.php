@@ -47,6 +47,9 @@
                                         {{ trans('cruds.order.fields.preferred_date') }}
                                     </th>
                                     <th>
+                                        {{ trans('cruds.order.fields.total') }}
+                                    </th>
+                                    <th>
                                         {{ trans('cruds.order.fields.status') }}
                                     </th>
                                     <th>
@@ -54,9 +57,6 @@
                                     </th>
                                     <th>
                                         {{ trans('cruds.order.fields.payment_status') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.order.fields.updated_by') }}
                                     </th>
                                     <th>
                                         &nbsp;
@@ -91,6 +91,9 @@
                                             {{ $order->preferred_date ?? '' }}
                                         </td>
                                         <td>
+                                            {{ $order->total ?? '' }}
+                                        </td>
+                                        <td>
                                             {{ App\Models\Order::STATUS_SELECT[$order->status] ?? '' }}
                                         </td>
                                         <td>
@@ -98,9 +101,6 @@
                                         </td>
                                         <td>
                                             {{ App\Models\Order::PAYMENT_STATUS_SELECT[$order->payment_status] ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $order->updated_by->name ?? '' }}
                                         </td>
                                         <td>
                                             @can('order_show')
