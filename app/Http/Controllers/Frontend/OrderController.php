@@ -22,7 +22,7 @@ class OrderController extends Controller
 
         $orders = Order::with(['fuel', 'payment', 'created_by', 'updated_by'])->get();
 
-        return view('client.orders.index', compact('orders'));
+        return view('frontend.orders.index', compact('orders'));
     }
 
     public function create()
@@ -35,7 +35,7 @@ class OrderController extends Controller
 
         $updated_bies = User::pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        return view('client.orders.create', compact('fuels', 'payments', 'updated_bies'));
+        return view('frontend.orders.create', compact('fuels', 'payments', 'updated_bies'));
     }
 
     public function store(StoreOrderRequest $request)
